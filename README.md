@@ -193,11 +193,12 @@ scp -r azureuser@<your-vm-ip>:~/airflow/logs airflow_project/logs/
 
 ## 🖼️ Screenshots
 
-> Upload your screenshots to `screenshots/` and replace the placeholders below.
-
-- ![Airflow UI](screenshots/airflow-ui.png)
-- ![Running DAG](screenshots/dag-run.png)
-- ![Azure SQL](screenshots/sql-database.png)
+- ![Airflow UI](snapshots/DAG.png)
+- ![Airflow UI](snapshots/etl_graph.png)
+- ![Airflow UI](snapshots/extract_data.png)
+- ![Airflow UI](snapshots/load_data.png)
+- ![Airflow UI](snapshots/trasnform_data.png)
+- ![Architechture_Diagram](snapshots/architecture_diagrams.png)
 
 ## 📜 License
 
