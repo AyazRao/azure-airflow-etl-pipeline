@@ -11,19 +11,19 @@ It’s designed as a **portfolio project** to showcase skills in Data Engineerin
 - [Technologies Used](#technologies-used)
 - [Folder Structure](#folder-structure)
 - [Setup Instructions](#setup-instructions)
-- [DAG & Scripts](#dag--scripts)
+- [DAG and Scripts](#dag-and-scripts)
 - [Running the Pipeline](#running-the-pipeline)
-- [Output & Logs](#output--logs)
+- [Output and Logs](#output-and-logs)
 - [Screenshots](#screenshots)
 - [License](#license)
 
-## 🧾 Project Overview
+## Project Overview
 
 This ETL pipeline extracts sales data from **Azure Blob Storage**, transforms it using **pandas**, and loads it into an **Azure SQL Database**.
 
 The orchestration is handled by **Apache Airflow** running on an Azure VM with **minimal resources (1 vCPU, 1GB RAM)**.
 
-## 🗂️ Folder Structure
+## Folder Structure
 
 ```
 airflow/
@@ -44,7 +44,7 @@ airflow/
 └── airflow.cfg
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ```
          Azure Blob Storage
@@ -68,7 +68,7 @@ airflow/
  Apache Airflow (on Azure VM)
 ```
 
-## 🧰 Technologies Used
+## Technologies Used
 
 - Python 3.11
 - Apache Airflow
@@ -78,7 +78,7 @@ airflow/
 - pyenv & virtualenv
 - pandas, sqlalchemy, pyodbc
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 🔹 Azure VM Setup (Linux B1s)
 
@@ -125,7 +125,7 @@ airflow users create   --username admin --firstname Ayaz --lastname Rao   --role
 bash ~/tune_airflow_config.sh
 ```
 
-## 🧠 DAG & Scripts Overview
+## DAG and Scripts
 
 ### `etl_pipeline.py` (DAG)
 
@@ -154,7 +154,7 @@ start >> middle >> end
 - Uses `sqlalchemy` or `pyodbc` to connect to Azure SQL Database
 - Loads cleaned data into the `sales_data` table
 
-## ▶️ Running the Pipeline
+## Running the Pipeline
 
 ### Webserver
 
@@ -176,7 +176,7 @@ http://<your-vm-ip>:8080
 
 Login with `admin / admin`
 
-## 💾 Downloading Output Files
+## Output and Logs
 
 From your **local terminal**, run:
 
@@ -191,7 +191,7 @@ scp azureuser@<your-vm-ip>:~/airflow/data/processed/clean_superstore.csv airflow
 scp -r azureuser@<your-vm-ip>:~/airflow/logs airflow_project/logs/
 ```
 
-## 🖼️ Screenshots
+## Screenshots
 
 - ![Airflow UI](snapshots/DAG.png)
 - ![Airflow UI](snapshots/etl_graph.png)
@@ -200,12 +200,12 @@ scp -r azureuser@<your-vm-ip>:~/airflow/logs airflow_project/logs/
 - ![Airflow UI](snapshots/trasnform_data.png)
 - ![Architechture_Diagram](snapshots/architecture_diagrams.png)
 
-## 📜 License
+## License
 
 MIT License. Use and modify freely. Credit appreciated.
 
-## 🙋 Contact
+## Contact
 
 Built by **Ayaz Rao**  
-📧 [your-email@example.com]  
-🌐 [LinkedIn or GitHub profile link]
+📧 ayazrao@hotmail.com
+🌐 [LinkedIn or GitHub profile link](https://www.linkedin.com/in/ayazrao/)
